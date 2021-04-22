@@ -26,6 +26,7 @@ namespace Arrays
                 new CakeType(7, 160),
                 new CakeType(3, 90),
                 new CakeType(2, 15),
+                new CakeType(4, 160),
             };
 
             int capacity = 20;
@@ -39,7 +40,7 @@ namespace Arrays
         public static long MaxDuffelBagValue(CakeType[] cakeTypes, int capacity)
         {
             //1. order the cakes by max value per kg
-            IEnumerable<CakeType> query = cakeTypes.OrderByDescending(pet => pet.Value / pet.Weight);
+            IEnumerable<CakeType> query = cakeTypes.OrderByDescending(c => c.Value / c.Weight);
 
             long maxValue = 0;
             int remainder, count = 0;
@@ -48,9 +49,9 @@ namespace Arrays
             {
                 //2. check if this cake can fill the bag with the max kg's. any remainder will continue the loop
 
-                remainder = capacity % cake.Weight;
-                count = capacity / cake.Weight; // check how many cakes with this value we can steal mwahahahahahahahaha :)
-                
+                // check how many cakes with this value we can steal mwahahahahahahahaha :)
+                count = Math.DivRem(capacity, cake.Weight, out  remainder);
+
                 if (count > 0)
                     maxValue += count * cake.Value;
 
