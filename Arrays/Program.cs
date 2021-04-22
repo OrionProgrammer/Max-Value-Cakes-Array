@@ -39,7 +39,7 @@ namespace Arrays
         public static long MaxDuffelBagValue(CakeType[] cakeTypes, int capacity)
         {
             //1. order the cakes by max value per kg
-            IEnumerable<CakeType> query = cakeTypes.OrderByDescending(pet => pet.Value / pet.Weight);
+            IEnumerable<CakeType> query = cakeTypes.OrderByDescending(c => c.Value / c.Weight);
 
             long maxValue = 0;
             int remainder, count = 0;
