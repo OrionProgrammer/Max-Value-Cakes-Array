@@ -26,7 +26,7 @@ namespace Arrays
                 new CakeType(7, 160),
                 new CakeType(3, 90),
                 new CakeType(2, 15),
-                new CakeType(4, 160),
+                //new CakeType(4, 160),
             };
 
             int capacity = 20;
@@ -58,7 +58,7 @@ namespace Arrays
                 //make capacity equal to remainder
                 capacity = remainder;
 
-                //stop the loop if we  filled out capacity haul and start running :D while eating ofcourse :@
+                //stop the loop if we  filled our capacity haul and start running :D while eating ofcourse :@
                 if (capacity == 0)
                     break;
             }
