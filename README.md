@@ -1,3 +1,5 @@
+[![Build Status](https://dev.azure.com/asheenk/Hello%20World/_apis/build/status/OrionProgrammer.Max-Value-Cakes-Array?branchName=master)](https://dev.azure.com/asheenk/Hello%20World/_build/latest?definitionId=1&branchName=master)
+
 # Max-Value-Cakes-Array
 Write a method MaxDuffelBagValue() that takes an array of cake type objects and a weight capacity, and returns the maximum monetary value the duffel bag can hold.
 
